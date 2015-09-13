@@ -63,6 +63,7 @@ We can then print our daily activies:
 ```{r, echo=TRUE}
 plot(steps$interval,steps$mn,type = "l")
 ```
+![alt tag](https://github.com/ericbaudon/RepData_PeerAssessment1/blob/master/Plots/Plot2.png)
 
 We can also calculate at what time, in average, we perform the maximum of steps during the day:
 ```{r, echo=TRUE}
@@ -109,6 +110,7 @@ And we can plot the new histogram:
 ```{r, echo=TRUE}
 hist(somme.clean$sm, main="Number of steps per day",xlab="Total steps",ylab="")
 ```
+![alt tag](https://github.com/ericbaudon/RepData_PeerAssessment1/blob/master/Plots/Plot3.png)
 
 Difficult to see any differences. in order to highlight this point, we performed the following coding/plotting to show the diffrences between the two collections of data:
 ```{r, echo=TRUE}
@@ -118,6 +120,7 @@ data.print<-rbind.data.frame(data1,data2)
 library(ggplot2)
 ggplot(data.print, aes(sm, fill = type)) + geom_density(alpha = 0.2) + labs(x="steps sum per days")+labs(title="Comparison of clean vs. initial")
 ```
+![alt tag](https://github.com/ericbaudon/RepData_PeerAssessment1/blob/master/Plots/Plot4.png)
 
 As we can see, our manipulation only re-centered our collection to give it a more gaussien shap. So the missing NA were not critical and didn't bias our initial studies.
 
@@ -142,6 +145,6 @@ final<-summarize(data.week,mn=mean(steps))
 library("lattice")
 xyplot(mn~interval|daytype, data = final,type="l",layout = c(1, 2))
 ```
-
+![alt tag](https://github.com/ericbaudon/RepData_PeerAssessment1/blob/master/Plots/Plot5.png)
 
 
