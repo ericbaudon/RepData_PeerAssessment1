@@ -41,6 +41,7 @@ Then we printed this repartition
 ```{r, echo=TRUE}
 hist(somme$sm, main="Number of steps per day",xlab="Total steps",ylab="")
 ```
+![alt tag](https://github.com/ericbaudon/RepData_PeerAssessment1/blob/master/Plots/Plot1.png)
 
 Finally we calculated the mean and median to have a global statistic on our experiment (we need to remove the NA to perform these statisitics):
 ```{r, echo=TRUE}
